@@ -3,9 +3,12 @@
 set -e
 
 IMAGES=(
-  "https://your-domain.com/images/1.jpg"
-  "https://your-domain.com/images/2.jpg"
-  "https://your-domain.com/images/3.jpg"
+  "https://raw.githubusercontent.com/LauLaman/bieber-prank/main/img/1.jpg"
+  "https://raw.githubusercontent.com/LauLaman/bieber-prank/main/img/2.jpg"
+  "https://raw.githubusercontent.com/LauLaman/bieber-prank/main/img/3.jpg"
+  "https://raw.githubusercontent.com/LauLaman/bieber-prank/main/img/4.jpeg"
+  "https://raw.githubusercontent.com/LauLaman/bieber-prank/main/img/5.jpeg"
+  "https://raw.githubusercontent.com/LauLaman/bieber-prank/main/img/6.jpg"
 )
 
 IMAGE=${IMAGES[$RANDOM % ${#IMAGES[@]}]}
