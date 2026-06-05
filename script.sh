@@ -33,7 +33,10 @@ EOF
 
         curl -fsSL "$IMAGE" -o "$TMPFILE"
 
-        if command -v gsettings >/dev/null 2>&1; then
+        if command -v hyprctl >/dev/null 2>&1; then
+            hyprctl hyprpaper preload "$TMPFILE"
+            hyprctl hyprpaper wallpaper ",$TMPFILE"
+        elif command -v gsettings >/dev/null 2>&1; then
             gsettings set org.gnome.desktop.background picture-uri "file://$TMPFILE"
         elif command -v xfconf-query >/dev/null 2>&1; then
             xfconf-query \
